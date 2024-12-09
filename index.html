@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Front Page</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body class="font-sans text-white">
+    <!-- Header Section -->
+    <header class="flex justify-between items-center px-6 py-4 bg-cover bg-center h-28 md:h-35" style="background-image: url('images/Background_image.jpg');">
+        <h1 class="text-2xl md:text-2xl font-bold" style="font-family: 'Dancing Script', cursive;">Sruthy</h1>
+        <nav>
+            <!-- Hamburger Icon -->
+            <button id="menu-button" class="text-xl md:hidden">
+            <i class="fas fa-bars"></i>
+            </button>
+            <!-- Navigation Menu -->
+            <ul id="menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 mt-2 bg-teal-800 rounded-md p-2 absolute top-16 right-4 shadow-lg md:shadow-none md:bg-transparent md:flex md:space-x-4 md:static md:mt-0 md:p-0">
+            <li><a href="#home" class="hover:underline text-sm md:text-base">Home</a></li>
+            <li><a href="#about" class="hover:underline text-sm md:text-base">About</a></li>
+            <li><a href="#experience" class="hover:underline text-sm md:text-base">Experience</a></li>
+            <li><a href="#projects" class="hover:underline text-sm md:text-base">Projects</a></li>
+            <li><a href="#contact" class="hover:underline text-sm md:text-base">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- Home Section (Main) -->
+<section id="home" class="bg-cover bg-center min-h-screen flex flex-col items-center justify-center " style="background-image: url('images/Background_image.jpg');">
+    <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-4 md:px-8">
+        <!-- First Column: Photo and Signature -->
+        <div class="flex flex-col items-center animate__animated animate__backInLeft">
+            
+            
+            <div class="w-80 h-80 mb-4 rounded-full border-4 border-white overflow-hidden">
+                <img src="images/me.png" alt="Profile Picture" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-5xl font-[Homemade Apple] italic mb-4" style="font-family: 'Dancing Script', cursive;">Sruthy</h1>
+        </div>
+        
+        <!-- Second Column: "Hi" with Waving Hand and Name -->
+        <div class="flex flex-col items-center justify-center text-center ">
+            <h1 class="text-5xl font-bold mb-4">
+                <p class="animate__animated animate__shakeX">Hi <i class="text-yellow-500 mr-2 fas fa-hand-sparkles"></i> </p>
+                
+                <p class="animate__animated animate__backInRight">I'm <br>Sruthy Surendran Sindhu</p>
+                
+            </h1>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/sruthy-surendran-sindhu-9a295a219?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgizNe08%2BQjWXsaAGBIS3PQ%3D%3D" class="text-xl hover:scale-110 hover:text-[#64ffda] transition-transform" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="sruthy228.1997@gmail.com" class="text-xl hover:scale-110 hover:text-[#64ffda] transition-transform" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="sruthy228.1997@gmail.com" class="text-xl hover:scale-110 hover:text-[#64ffda] transition-transform" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- About Me Section -->
+<section id="about" class="py-12 bg-white text-black">
+    <div class="w-full px-6 md:px-16">
+        <!-- Horizontal lines and title -->
+        <hr class="border-t-4 border-gray-400 mb-6">
+        <h2 class="text-3xl font-bold text-left mb-6" style="font-family: 'Kalam', cursive; animation: fadeIn 1s ease;">
+            About Me
+        </h2>
+    
+        <!-- First Row: Description -->
+        <div class="mb-8 animate__animated animate__fadeInUp animate__delay-0.5s">
+            <p class="text-lg" style="font-family: 'Kalam', cursive;">
+                Hi, I’m Sruthy Surendran Sindhu, a web developer from Truro, Canada, passionate about creating user-friendly and dynamic web applications.
+            </p>
+        </div>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- First Column: Education -->
+            <div class="space-y-4 flex items-start animate__animated animate__fadeInLeft animate__delay-1s">
+                <div class="text-4xl text-yellow-500 mr-4">
+                    <i class="fas fa-graduation-cap"></i> <!-- Graduation Cap Icon -->
+                </div>
+                <div style="font-family: 'Kalam', cursive;">
+                    <p><strong>Diploma in IT Web Programming</strong> - NSCC - 2025</p>
+                    <p><strong>Diploma in Computer Engineering</strong> - Technical College - 2018</p>
+                </div>
+            </div>
+        
+            <!-- Second Column: Skills -->
+            <div class="space-y-4 flex items-start animate__animated animate__fadeInRight animate__delay-1s">
+                <div class="text-4xl text-yellow-500 mr-4">
+                    <i class="fas fa-lightbulb"></i> <!-- Bulb Icon -->
+                </div>
+                <div style="font-family: 'Kalam', cursive;">
+                    <p><strong>Languages & Frameworks:</strong> Java, Python, C# (ASP.NET Core MVC), JavaScript/TypeScript, React, Next.js, Node.js</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, Java Web Technologies, SQL, MongoDB (optimized data operations)</p>
+                    <p><strong>Tools:</strong> Git</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Third Row: Personal Statement and Icons -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- First Column: Personal Statement -->
+            <div class="md:col-span-3 animate__animated animate__fadeInUp animate__delay-1.5s">
+                <p style="font-family: 'Kalam', cursive;">
+                    I love tackling challenges, whether it’s migrating projects, integrating databases, or improving user experiences. Collaboration, learning, and attention to detail are at the heart of everything I do. Explore my portfolio to see my work, and feel free to reach out!
+                </p>
+            </div>
+    
+            <!-- Second Column: Icons -->
+            <div class="flex flex-col items-center justify-center space-y-4 animate__animated animate__fadeInRight animate__delay-1.5s">
+                <!-- First Row: Message Icon -->
+                <div class="text-4xl text-yellow-500 mb-4">
+                    <i class="fas fa-comment-dots"></i> <!-- Message Icon -->
+                </div>
+            
+                <!-- Second Row: Two Columns with Icons -->
+                <div class="grid grid-cols-2 gap-6 text-4xl">
+                    <div class="text-blue-500">
+                        <i class="fas fa-brain"></i> <!-- Brain Icon -->
+                    </div>
+                    <div class="text-green-500">
+                        <i class="fas fa-handshake"></i> <!-- Handshake Icon -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Horizontal lines at the bottom -->
+        <hr class="border-t-4 border-gray-400 mt-6">
+    </div>
+</section>
+
+
+
+  <!-- Experience Section -->
+    <!-- Experience Section -->
+<section id="experience" class="py-12 bg-cover bg-center text-black" style="background-image: url('images/Background_image.jpg');">
+    <div class="w-full px-6 md:px-16">
+        <h2 class="text-3xl font-bold text-left mb-6 text-white" style="font-family: 'Kalam', cursive;">Experience</h2>
+    
+        <!-- Grid for Experience Divs -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- First Div with Pastel Color #F1F7B5 -->
+            <div class="p-6 rounded-lg experience-card" style="background-color: #F1F7B5;">
+                <h4 class="text-xl font-semibold mb-2">Crew Member (Part-Time)</h4>
+                <p class="mb-2">A&W, Willow Street, Truro, NS 10/2023 – Present</p>
+                <p class="flex items-center mb-1"><i class="fas fa-headset text-yellow-500 mr-3"></i>Customer Service</p>
+                <p class="flex items-center mb-1"><i class="fas fa-users text-blue-500 mr-3"></i>Team Collaboration</p>
+                <p class="flex items-center"><i class="fas fa-sync-alt text-green-500 mr-3"></i>Adaptability</p>
+            </div>
+    
+            <!-- SECOND Div with Pastel Color #A8D1D1 -->
+            <div class="p-6 rounded-lg experience-card" style="background-color: #A8D1D1;">
+                <h4 class="text-xl font-semibold mb-2">Lab Instructor</h4>
+                <p class="mb-2">Govt Polytechnic College, India- 10/2021 – 07/2022</p>
+                <p class="flex items-center mb-1"><i class="fas fa-chalkboard-teacher text-yellow-500 mr-3"></i>Training Leader</p>
+                <p class="flex items-center mb-1"><i class="fas fa-tasks text-blue-500 mr-3"></i>Course Alignment</p>
+                <p class="flex items-center"><i class="fas fa-user-graduate text-green-500 mr-3"></i>Mentorship</p>
+            </div>
+    
+            <!-- Third Div with Pastel Color #DFEBEB -->
+            <div class="p-6 rounded-lg experience-card" style="background-color: #DFEBEB;">
+                <h4 class="text-xl font-semibold mb-2">Apprentice Junior Developer</h4>
+                <p class="mb-2">Keltron, India - 08/2019 – 08/2020</p>
+                <p class="flex items-center mb-1"><i class="fas fa-cogs text-yellow-500 mr-3"></i>Solution Development</p>
+                <p class="flex items-center mb-1"><i class="fas fa-handshake text-blue-500 mr-3"></i>Collaboration</p>
+                <p class="flex items-center"><i class="fas fa-tools text-green-500 mr-3"></i>Technical Expertise</p>
+            </div>
+
+            <!-- Fourth Div with Pastel Color #FFCBCB -->
+            <div class="p-6 rounded-lg experience-card" style="background-color: #FFCBCB;">
+                <h4 class="text-xl font-semibold mb-2">Junior Engineer Trainee</h4>
+                <p class="mb-2">Cycloides Technologies, India - 01/2019 – 05/2019</p>
+                <p class="flex items-center mb-1"><i class="fas fa-code text-yellow-500 mr-3"></i>Front-end Development</p>
+                <p class="flex items-center mb-1"><i class="fas fa-users text-blue-500 mr-3"></i>Teamwork</p>
+                <p class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Quality Assurance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-12 bg-gray-100 text-black">
+    <div class="w-full px-6 md:px-16">
+        <h2 class="text-3xl font-bold text-left mb-6" style="font-family: 'Kalam', cursive;">Projects</h2>
+
+        <!-- Grid for Project Divs -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="p-6 bg-white shadow-lg rounded-lg project-card">
+                <img src="images/project1.png" alt="Project 1" class="w-full h-48 object-cover mb-4 rounded-lg project-img">
+                <h3>Project 1: Insult Generator</h3>
+                <p class="text-sm text-gray-700">Python project that generates insults based on user input.</p>
+                <p class="text-sm text-gray-700">Technologies used: Python</p>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="p-6 bg-white shadow-lg rounded-lg project-card">
+                <img src="images/project2.png" alt="Project 2" class="w-full h-48 object-cover mb-4 rounded-lg project-img">
+                <h3>Project 2: Number Guessing Game</h3>
+                <p class="text-sm text-gray-700">Python project that guesses numbers between 1 to 100 with error checking.</p>
+                <p class="text-sm text-gray-700">Technologies: Python</p>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="p-6 bg-white shadow-lg rounded-lg project-card">
+                <img src="images/project3.png" alt="Project 3" class="w-full h-48 object-cover mb-4 rounded-lg project-img">
+                <h3>Project 3: Adventure Game</h3>
+                <p class="text-sm text-gray-700">A game that works based on a given menu.</p>
+                <p class="text-sm text-gray-700">Technologies: HTML, CSS, JavaScript, etc.</p>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="p-6 bg-white shadow-lg rounded-lg project-card">
+                <img src="images/project4.png" alt="Project 4" class="w-full h-48 object-cover mb-4 rounded-lg project-img">
+                <h3 class="text-xl font-semibold mb-2">Portfolio</h3>
+                <p class="text-sm text-gray-700">Technologies: HTML, CSS</p>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="p-6 bg-white shadow-lg rounded-lg project-card">
+                <img src="images/project5.png" alt="Project 5" class="w-full h-48 object-cover mb-4 rounded-lg project-img">
+                <h3 class="text-xl font-semibold mb-2">Adding Reviews in a Product</h3>
+                <p class="text-sm text-gray-700">Technologies: ASP.NET, MySQL, CSS</p>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="p-6 bg-white shadow-lg rounded-lg project-card">
+                <img src="images/project6.png" alt="Project 6" class="w-full h-48 object-cover mb-4 rounded-lg project-img">
+                <h3 class="text-xl font-semibold mb-2">Photo Album</h3>
+                <p class="text-sm text-gray-700">NextJS, Tailwind, MySQL/MongoDB</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+  <!-- Contact Me Section -->
+<section id="contact" class="py-12 bg-cover bg-center text-white" style="background-image: url('images/Background_image.jpg');">
+    <div class="w-full px-6 md:px-16" style="font-family: 'Kalam', cursive;">
+        <h2 class="text-3xl font-bold text-left mb-6">Contact Me</h2>
+        
+
+        <!-- Contact Form -->
+        <div class="max-w-2xl mx-auto">
+            <form action="https://formspree.io/f/maykdyll" method="POST" class="space-y-6">
+                <!-- Name Field -->
+                <div class="flex flex-col">
+                    <label for="name" class="text-lg font-semibold mb-2">Name</label>
+                    <input type="text" id="name" name="name" required class="border border-gray-300 p-3 rounded-lg">
+                </div>
+
+                <!-- Email Field -->
+                <div class="flex flex-col">
+                    <label for="email" class="text-lg font-semibold mb-2">Email</label>
+                    <input type="email" id="email" name="email" required class="border border-gray-300 p-3 rounded-lg">
+                </div>
+
+                <!-- Subject Field -->
+                <div class="flex flex-col">
+                    <label for="subject" class="text-lg font-semibold mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" required class="border border-gray-300 p-3 rounded-lg">
+                </div>
+
+                <!-- Message Field -->
+                <div class="flex flex-col">
+                    <label for="message" class="text-lg font-semibold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="6" required class="border border-gray-300 p-3 rounded-lg"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+  <script>
+    // JavaScript for toggling the menu
+    const menuButton = document.getElementById("menu-button");
+    const menu = document.getElementById("menu");
+
+    menuButton.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- Add this to your CSS or Tailwind configuration -->
+
+
+  
+</body>
+</html>
