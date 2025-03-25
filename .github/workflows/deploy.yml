@@ -1,28 +1,32 @@
-# name of the workflow
 name: Deploy HTML/CSS to EC2
 
-# Trigger the workflow when there is a push to the main branch or manually using workflow_dispatch
 on:
   push:
     branches:
       - main
   workflow_dispatch:
 
-# jobs that the workflow will run
 jobs:
-  # name of the job
   deploy:
-    # the type of machine that the job will run on - the runner
     runs-on: ubuntu-latest
-    # steps that the job will run
     steps:
-      # this step sets up the SSH agent to allow SSH access to your EC2 instance
+      # Step 1: Checkout code from the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Add EC2 to known hosts to prevent host key verification issues
+      - name: Add EC2 to known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      # Step 3: Setup SSH for accessing the EC2 instance
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # this step will ssh into the EC2 instance and deploy the code
+      # Step 4: Deploy HTML/CSS to EC2
       - name: Deploy HTML/CSS to EC2
         run: |
           ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'ENDSSH'
@@ -30,8 +34,8 @@ jobs:
             cd /var/www/html
             # Pull the latest code from GitHub
             git pull origin main
-            # Restart Apache or nginx to reflect changes (for Apache, replace with nginx commands if using nginx)
-            sudo systemctl restart httpd    # For Amazon Linux/Apache
-            # Or for Ubuntu/nginx, you can use:
+            # Restart Apache or Nginx depending on your setup
+            sudo systemctl restart apache2    # For Ubuntu with Apache
+            # Or for Nginx:
             # sudo systemctl restart nginx
           ENDSSH
