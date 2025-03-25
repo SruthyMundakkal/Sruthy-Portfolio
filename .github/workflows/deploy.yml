@@ -34,8 +34,8 @@ jobs:
             cd /var/www/html
             # Pull the latest code from GitHub
             git pull origin main
-            # Restart Apache or Nginx depending on your setup
-            sudo systemctl restart apache2    # For Ubuntu with Apache
-            # Or for Nginx:
-            # sudo systemctl restart nginx
+            # Check Nginx status first
+            sudo systemctl status nginx || echo "Nginx not running, trying to start it."
+            # Restart Nginx to reflect changes
+            sudo systemctl restart nginx
           ENDSSH
