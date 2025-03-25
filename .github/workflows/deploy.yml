@@ -36,6 +36,5 @@ jobs:
             git pull origin main
             # Check Nginx status first
             sudo systemctl status nginx || echo "Nginx not running, trying to start it."
-            # Restart Nginx to reflect changes
-            sudo systemctl restart nginx
+           
           ENDSSH
